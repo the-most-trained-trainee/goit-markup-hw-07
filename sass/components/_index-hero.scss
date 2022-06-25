@@ -64,7 +64,6 @@
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-
 .modal {
     position: absolute;
     display: block;
@@ -86,7 +85,6 @@
     width: 100%;
     height: 100%;
 }
-
 
 .close-button-icon {
     display: block;
@@ -177,12 +175,19 @@
     border-color: #2196F3;
 }
 
-.form-label-container:hover .form-label-icon {
-    fill: #2196F3;
-}
-
-.form-label-container:focus-within .form-label-icon {
-    fill: #2196F3;
+.form-label-icon {
+    position: absolute;
+    fill: #212121;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .form-label-container:hover & {
+        fill: #2196F3;
+    }
+    .form-label-container:focus-within & {
+        fill: #2196F3;
+    }
 }
 
 .form-field label {
@@ -215,11 +220,9 @@
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 12px 16px;
-}
-
-.modal-textarea:hover, 
-.modal-textarea:focus {
-    border-color: #2196F3;
+    &:hover, &:focus {
+        border-color: #2196F3;
+    }
 }
 
 .gtc-checkbox {
@@ -269,15 +272,6 @@
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: #2196F3;
-}
-
-.form-label-icon {
-    position: absolute;
-    fill: #212121;
-    width: 18px;
-    height: 18px;
-    left: 12px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label-container {

@@ -10,3 +10,32 @@
 .client-list li:not(:last-child) {
     margin-right: 30px;
 }
+
+.client-card {
+    display: block;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 170px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border-color: #2196F3;
+        cursor: pointer;
+    }
+}
+
+.client-pict {
+    fill: #AFB1B8;
+    width: 106px;
+    height: 60px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .client-card:hover & {
+        fill: #2196F3;
+    }
+    .client-card:focus & {
+        fill: #2196F3;
+    }
+}

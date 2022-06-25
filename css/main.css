@@ -38,16 +38,23 @@ a {
   letter-spacing: 0.03em;
 }
 
-.logo {
+.logo, .webstudio__icon {
   display: inline-block;
   font-family: 'Raleway', Arial, Helvetica;
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 31px;
   letter-spacing: 0.03em;
+  margin-right: 92px;
+}
+
+.logo {
   color: #000000;
-  font-style: normal;
-  margin-right: 93px;
+}
+
+.webstudio__icon {
+  color: #FFFFFF;
 }
 
 .logo__web {
@@ -140,7 +147,7 @@ header {
   display: flex;
 }
 
-.contacts__item:last-child {
+.contacts li:last-child {
   margin-left: 30px;
 }
 
@@ -200,22 +207,6 @@ footer {
   display: flex;
 }
 
-.webstudio__icon {
-  display: inline-block;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-  margin-right: 92px;
-}
-
-.webstudio__icon---part {
-  color: #2196F3;
-}
-
 .contact-details {
   padding-top: 20px;
 }
@@ -237,8 +228,7 @@ footer {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-details a:hover,
-.contact-details a:focus {
+.contact-details a:hover, .contact-details a:focus {
   color: #2196F3;
 }
 
@@ -308,8 +298,7 @@ footer {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-network-hover:hover,
-.footer-network-hover:focus {
+.footer-network-hover:hover, .footer-network-hover:focus {
   background-color: #2196F3;
   cursor: pointer;
 }
@@ -368,6 +357,11 @@ footer {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-submit-button:hover, .footer-submit-button:focus {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 .footer-submit-button::after {
   content: "";
   width: 24px;
@@ -378,12 +372,6 @@ footer {
   margin-left: 10px;
   background-image: url(../images/icon-send.svg);
   background-size: contain;
-}
-
-.footer-submit-button:hover,
-.footer-submit-button:focus {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 #footer-mail {
@@ -635,6 +623,16 @@ footer {
   border-color: #2196F3;
 }
 
+.form-label-icon {
+  position: absolute;
+  fill: #212121;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-label-container:hover .form-label-icon {
   fill: #2196F3;
 }
@@ -676,8 +674,7 @@ footer {
   padding: 12px 16px;
 }
 
-.modal-textarea:hover,
-.modal-textarea:focus {
+.modal-textarea:hover, .modal-textarea:focus {
   border-color: #2196F3;
 }
 
@@ -739,16 +736,6 @@ footer {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196F3;
-}
-
-.form-label-icon {
-  position: absolute;
-  fill: #212121;
-  width: 18px;
-  height: 18px;
-  left: 12px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label-container {
@@ -855,22 +842,34 @@ footer {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.details-attention:hover .details-attention-pict {
+.details-attention:hover .details-attention-pict, .details-attention:hover
+.punctuality-pict, .details-attention:hover
+.planning-pict, .details-attention:hover
+.uptodate {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.punctuality:hover .punctuality-pict {
+.punctuality:hover .details-attention-pict, .punctuality:hover
+.punctuality-pict, .punctuality:hover
+.planning-pict, .punctuality:hover
+.uptodate {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.planning:hover .planning-pict {
+.planning:hover .details-attention-pict, .planning:hover
+.punctuality-pict, .planning:hover
+.planning-pict, .planning:hover
+.uptodate {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.up-to-date:hover .uptodate {
+.up-to-date:hover .details-attention-pict, .up-to-date:hover
+.punctuality-pict, .up-to-date:hover
+.planning-pict, .up-to-date:hover
+.uptodate {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -944,43 +943,8 @@ footer {
   display: block;
 }
 
-.client-card {
-  display: block;
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
-  width: 170px;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-card:hover,
-.client-card:focus {
-  border-color: #2196F3;
-  cursor: pointer;
-}
-
-.client-card:hover .client-pict {
-  fill: #2196F3;
-}
-
-.client-card:focus .client-pict {
-  fill: #2196F3;
-}
-
-.client-pict {
-  fill: #AFB1B8;
-  width: 106px;
-  height: 60px;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .team-members-background {
-  background-color: var(--team-background-color);
+  background-color: #F5F4FA;
 }
 
 .team-members {
@@ -994,7 +958,7 @@ footer {
 
 .member-card {
   width: 270px;
-  background-color: var(--button-hero-color);
+  background-color: #ffffff;
   margin-right: 30px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -1024,7 +988,7 @@ footer {
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--description-color);
+  color: #757575;
 }
 
 .network-list {
@@ -1074,7 +1038,7 @@ footer {
 }
 
 .network-hover:hover {
-  background-color: var(--text-hover-color);
+  background-color: #2196F3;
   cursor: pointer;
 }
 
@@ -1083,7 +1047,7 @@ footer {
 }
 
 .network-hover:focus {
-  background-color: var(--text-hover-color);
+  background-color: #2196F3;
   cursor: pointer;
 }
 
@@ -1116,6 +1080,40 @@ footer {
 
 .client-list li:not(:last-child) {
   margin-right: 30px;
+}
+
+.client-card {
+  display: block;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  width: 170px;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-card:hover, .client-card:focus {
+  border-color: #2196F3;
+  cursor: pointer;
+}
+
+.client-pict {
+  fill: #AFB1B8;
+  width: 106px;
+  height: 60px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-card:hover .client-pict {
+  fill: #2196F3;
+}
+
+.client-card:focus .client-pict {
+  fill: #2196F3;
 }
 
 .selection-buttons {

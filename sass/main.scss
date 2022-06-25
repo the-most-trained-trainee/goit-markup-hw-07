@@ -1,11 +1,7 @@
-// Main Items: Container, Section, Styles Cancelling
-
 body {
     font-family: 'Roboto', Arial, Helvetica;
     color: #212121;
 }
-
-
 
 ul, li, h1, h2, h3, h4, p, img {
     padding: 0;
@@ -29,7 +25,6 @@ a {
     margin-right: auto;
 }
 
-
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -43,33 +38,8 @@ a {
     letter-spacing: 0.03em;
 }
 
-
 @import "./utils/variables";
-
-// Logo 
-
-.logo {
-    display: inline-block;
-
-    font-family: 'Raleway', Arial, Helvetica;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: #000000;
-    font-style: normal;
-
-    margin-right: 93px;
-}
-
-.logo__web {
-    color: #2196F3;
-}
-
-
-
-
-
+@import "./components/logo";
 @import "./components/page-header";
 @import "./components/page-footer";
 @import "./components/index-hero";
@@ -78,9 +48,3 @@ a {
 @import "./components/index-team";
 @import "./components/index-clients";
 @import "./components/portfolio";
-
-
-
- 
-
-

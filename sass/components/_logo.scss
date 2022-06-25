@@ -1,0 +1,24 @@
+%logo-default {
+    display: inline-block;
+    font-family: 'Raleway', Arial, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    margin-right: 92px;
+}
+
+.logo {
+    @extend %logo-default;
+    color: #000000;
+}
+
+.webstudio__icon {
+    @extend %logo-default;
+    color: #FFFFFF;
+}
+
+.logo__web {
+    color: #2196F3;
+}

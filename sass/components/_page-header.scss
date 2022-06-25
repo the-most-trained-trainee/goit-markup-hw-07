@@ -9,8 +9,6 @@ header {
     align-items: center;
 }
 
-// Navigation
-
 .navigation {
     display: flex;
     align-items: center;
@@ -68,17 +66,11 @@ header {
     margin-bottom: -1px;
 }
 
-// Contacts 
-
 .contacts {
     display: flex;
-}
-
-.contacts__item {
-}
-
-.contacts__item:last-child {
-    margin-left: 30px;
+    & li:last-child {
+        margin-left: 30px;
+    }
 }
 
 .contacts__icon {
