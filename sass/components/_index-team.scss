@@ -1,14 +1,14 @@
-.team-members-background {
-    background-color: $secondary-background-color;
-}
-
-.team-members {
+.team {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
 }
 
-.member-card {
+.team__background {
+    background-color: $secondary-background-color;
+}
+
+.team__member-card {
     width: 270px;
     background-color: $main-color;
     margin-right: 30px;
@@ -20,20 +20,20 @@
     }
 }
 
-.member-card-description {
+.team__card-content {
     padding-top: 30px;
 }
 
-.member-name {
+.team__member-name {
     @include font-set ($font-weight: 500, $font-size: 16px, $line-height: 19px, $color: $main-text-color);
     padding-bottom: 10px;
 }
 
-.member-position {
+.team__member-position {
     @include font-set ($font-size: 16px, $line-height: 19px, $color: $secondary-text-color);
 }
 
-.network-list {
+.team__communications {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@
     }
 }
 
-.network-hover {
+.team__communications--referencing {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,10 +73,10 @@
     height: 20px;
     fill: $inactive-pict-color;
     transition: fill $cubic-standard;
-    .network-hover:hover & {
+    .team__communications--referencing:hover & {
         fill: $main-color;
     }
-    .network-hover:focus & {
+    .team__communications--referencing:focus & {
         fill: $main-color;
     }
 }

@@ -1,4 +1,4 @@
-.selection-buttons {
+.selection {
     display: flex;
     justify-content: center;
     & li {
@@ -9,7 +9,7 @@
     }
 }
 
-.filter-button {
+.selection__button {
     @include font-set ($font-weight: 500, $font-size: 16px, $line-height: 26px, $color: $main-text-color);
     display: flex;
     background-color: $secondary-background-color;
@@ -29,22 +29,22 @@
     }
 }
 
-.project-name {
-    @include font-set ($font-weight: 700, $font-size: 18px, $line-height: 36px, $text-align: left, $letter-spacing: 0.06em, $color: $main-text-color);
-}
-
-.project-description {
-    @include font-set ($font-size: 16px, $line-height: 30px, $text-align: left, $color: $secondary-text-color);
-}
-
-.project-list {
+.projects {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: -30px;
 }
 
-.project-card {
+.projects__name {
+    @include font-set ($font-weight: 700, $font-size: 18px, $line-height: 36px, $text-align: left, $letter-spacing: 0.06em, $color: $main-text-color);
+}
+
+.projects__description {
+    @include font-set ($font-size: 16px, $line-height: 30px, $text-align: left, $color: $secondary-text-color);
+}
+
+.projects__card {
     display: block;
     width: 370px;
     background-color: $main-color;
@@ -55,8 +55,7 @@
     }
 }
 
-
-.project-container {
+.projects__container {
     display: block;
     transition: box-shadow $cubic-standard;
     &:hover {
@@ -65,7 +64,7 @@
     }
 }
 
-.project-description-name {
+.projects__description-block {
     display: block;
     padding-left: 24px;
     padding-top: 20px;
@@ -76,13 +75,13 @@
 
 }
 
-.project-thumb {
+.projects__thumb {
     position: relative;
     display: block;
     overflow: hidden;
  }
 
- .project-description-text {
+ .projects__description-text {
     display: block;
     position: absolute;
     bottom: 0;
@@ -96,12 +95,12 @@
     margin-top: -1px;
     transform: translateY(100%);
     transition: transform $cubic-standard;
-    .project-container:hover & {
+    .projects__container:hover & {
        transform: translateY(0);
     }
  }
 
- .project-img {
+ .project__image {
      display: block;
  }
 

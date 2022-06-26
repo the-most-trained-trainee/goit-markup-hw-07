@@ -12,19 +12,17 @@
     margin-right: auto;
 }
 
-.hero-text {
+.hero-section__text {
     @include font-set($font-weight: 900, $font-size: 44px, $line-height: 60px, $letter-spacing: 0.06em, $transform: uppercase);
 }
 
-.center-button {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-}
-
-.order-button {
+.hero-section__button {
+    display: block;
     height: 50px;
     width: 200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-radius: 4px;
     background-color: $active-color;
@@ -32,6 +30,8 @@
     @include font-set ($font-weight: 700, $font-size: 16px, $line-height: 30px, $letter-spacing: 0.06em);
     cursor: pointer;
 }
+
+// Modal Window 
 
 .backdrop {
     width: 100%;
@@ -66,31 +66,14 @@
     }
 }
 
-.modal-background {
+.modal__background {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.close-button-icon {
-    display: block;
-    width: 11px;
-    height: 11px;
-    fill: $contast-color;
-    transition: fill $cubic-standard;
-    &:hover, &:focus {
-        fill: $active-color;
-    }
-    .close-button:hover & {
-        fill: $active-color;
-    }
-    .close-button:focus & {
-        fill: $active-color;
-    }
-}
-
-.close-button {
+.modal__close {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -104,7 +87,25 @@
     background-color: $main-color;
 }
 
-.js-speaker-form {
+.modal__close--touching {
+    display: block;
+    width: 11px;
+    height: 11px;
+    fill: $contrast-color;
+    transition: fill $cubic-standard;
+    &:hover, &:focus {
+        fill: $active-color;
+    }
+    .modal__close:hover & {
+        fill: $active-color;
+    }
+    .modal__close:focus & {
+        fill: $active-color;
+    }
+}
+
+
+.form {
     display: inline-block;
     width: 448px;
     margin-left: 39px;
@@ -112,28 +113,29 @@
     margin-top: 41px;
 }
 
-.form-heading {
+.form__heading {
     @include font-set ($font-weight: 700, $font-size: 20px, $line-height: 23px, $color: $main-text-color);
     margin-bottom: 12px;
 }
 
-.form-field-list {
+.form__field-list {
     list-style: none;
     & li:nth-last-child(1) {
         margin-bottom: 20px;
     }
 }
 
-.form-field {
+.form__field {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     & label {
+        @include font-set ($line-height: 14px, $text-align: left, $letter-spacing: 0.01em, $color: $secondary-text-color);
         margin-bottom: 4px;
     }
 }
 
-.form-field input {
+.form__field input {
     @include font-set ($text-align: left, $letter-spacing: 0.01em, $color: $main-text-color);
     border: 1px solid rgba(33, 33, 33, 0.2);
     width: 100%;
@@ -149,26 +151,28 @@
     }
 }
 
-.form-label-icon {
+.form__field-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form__field-icon {
     position: absolute;
     fill: $main-text-color;
     width: 18px;
     height: 18px;
     left: 12px;
     transition: fill $cubic-standard;
-    .form-label-container:hover & {
+    .form__field-container:hover & {
         fill: $active-color;
     }
-    .form-label-container:focus-within & {
+    .form__field-container:focus-within & {
         fill: $active-color;
     }
 }
 
-.form-label {
-    @include font-set ($line-height: 14px, $text-align: left, $letter-spacing: 0.01em, $color: $secondary-text-color);
-}
-
-.modal-textarea {
+.form__textarea {
     @include font-set ($text-align: left, $letter-spacing: 0.01em, $color: $main-text-color);
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -180,7 +184,7 @@
     }
 }
 
-.submit-button {
+.form__submit-button {
     @include font-set ($font-weight: 700, $font-size: 16px, $line-height: 30px, $letter-spacing: 0.06em);
     display: flex;
     justify-content: center;
@@ -191,35 +195,16 @@
     background-color: $active-color;
     cursor: pointer;
     border: none;
-    transition: box-shadow $cubic-standard;
     margin-left: auto;
     margin-right: auto;
+    transition: box-shadow $cubic-standard;
     &:hover, &:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 }
 
-.form-label-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
-.gtc-link {
-    @include font-set ($line-height: 24px, $color: $active-color);
-    text-decoration-line: underline;
-}
-
-#gtc {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    z-index: 1;
-    margin-right: 7px;
-    appearance: none;
-}
-
-.gtc-checkbox {
+.field__gtc {
     @include font-set ($line-height: 24px, $color: $secondary-text-color);
     position: relative;
     display: flex;
@@ -228,20 +213,28 @@
     margin-left: 13px;
 }
 
-.new-gtc-checkbox {
+.field__gtc--following {
+    @include font-set ($line-height: 24px, $color: $active-color);
+    text-decoration-line: underline;
+}
+
+#field__gtc--checking {
     display: inline-block;
     width: 16px;
     height: 15px;
+    z-index: 1;
+    margin-right: 7px;
+    appearance: none;
 }
 
-.checkbox-frame {
+.field__gtc--positioning {
     display: inline-block;
     position: absolute;
     width: 16px;
     height: 15px;
     border: 2px solid $main-text-color;
     border-radius: 2px;
-    #gtc:checked + & {
+    #field__gtc--checking:checked + & {
         border: none;
         background-image: url("../images/icon-check.svg");
         background-size: contain;

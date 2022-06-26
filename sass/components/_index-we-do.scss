@@ -1,20 +1,20 @@
-.we-do-section {
-    padding-top: 0;
-    padding-bottom: 94px;
-}
-
 .activities {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
 
-.activity-thumb {
+.activities__section {
+    padding-top: 0;
+    padding-bottom: 94px;
+}
+
+.activities__description {
     position: relative;
     display: block;
 }
 
-.activity-heading {
+.activities__heading {
     position: absolute;
     display: flex;
     height: 70px;
@@ -26,6 +26,6 @@
     background-color: rgba(47, 48, 58, 0.8);
 }
 
-.activity-image {
+.activities__image {
     display: block;
 }

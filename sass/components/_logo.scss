@@ -7,10 +7,10 @@
 
 .logo {
     @extend %logo-default;
-    color: $contast-color;
+    color: $contrast-color;
 }
 
-.webstudio__icon {
+.logo__studio {
     @extend %logo-default;
     color: $main-color;
 }

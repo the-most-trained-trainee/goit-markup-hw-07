@@ -1,4 +1,4 @@
-.qualities-section {
+.qualities {
     padding-top: 97px;
     padding-bottom: 91px;
     & h2 {
@@ -6,44 +6,19 @@
     }
 }
 
-.qualities {
+.qualities__list {
     display: flex;
     justify-content: space-between;
     & li {
         width: 270px;
     }
-}
-
-.quality-heading {
-    @include font-set ($font-weight: 700, $line-height: 14px, $text-align: left, $letter-spacing: 0.03em, $color: $main-text-color, $transform: uppercase);
-    padding-bottom: 10px;
-}
-
-.quality-text {
-    @include font-set ($line-height: 24px, $text-align: left, $letter-spacing: 0.03em, $color: $secondary-text-color);
-}
-
-.details-attention-pict,
-.punctuality-pict,
-.planning-pict,
-.uptodate {
-    transition: box-shadow $cubic-standard;
-
-    .details-attention:hover & {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .punctuality:hover & {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .planning:hover & {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .up-to-date:hover & {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    & svg {
+        width: 70px;
+        height: 70px;
     }
 }
 
-.quality-card {
+.qualities__card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +26,17 @@
     height: 120px;
     background-color: $secondary-background-color;
     margin-bottom: 30px;
+    transition: box-shadow $cubic-standard;
+    .qualities__list li:hover & {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }
 
-.quality-svg {
-    width: 70px;
-    height: 70px;
+.qualities__heading {
+    @include font-set ($font-weight: 700, $line-height: 14px, $text-align: left, $letter-spacing: 0.03em, $color: $main-text-color, $transform: uppercase);
+    padding-bottom: 10px;
+}
+
+.qualities__text {
+    @include font-set ($line-height: 24px, $text-align: left, $letter-spacing: 0.03em, $color: $secondary-text-color);
 }

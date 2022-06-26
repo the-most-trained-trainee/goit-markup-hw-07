@@ -14,16 +14,13 @@
     <header>
       <div class="container header__container">
         <nav class="navigation">
-          <a href="/index.html" class="logo"
-            ><span class="logo__web">Web</span>Studio</a>
+          <a href="/index.html" class="logo"><span class="logo__web">Web</span>Studio</a>
           <ul class="navigation__list">
             <li>
-              <a href="./index.html" class="navigation__link--inactive"
-                >Студия</a>
+              <a href="./index.html" class="navigation__link--inactive">Студия</a>
             </li>
             <li>
-              <a href="./portfolio.html" class="navigation__link--active"
-                >Портфолио</a>
+              <a href="./portfolio.html" class="navigation__link--active">Портфолио</a>
             </li>
             <li>
               <a href="" class="navigation__link--inactive">Контакты</a>
@@ -33,7 +30,7 @@
         <ul class="contacts">
           <li>
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon e-mail">
+              <svg class="contacts__icon contacts__icon--mailing">
                 <use href="./images/symbol-defs.svg#contact1"></use>
               </svg>
               <div class="contacts__phone">info@devstudio.com</div>
@@ -41,7 +38,7 @@
           </li>
           <li>
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon phone">
+              <svg class="contacts__icon contacts__icon--calling">
                 <use href="./images/symbol-defs.svg#contact2"></use>
               </svg>
               <div class="contacts__phone">+38 096 111 11 11</div>
@@ -55,210 +52,210 @@
         <div class="container">
           <!-- Project Type Selection Buttons -->
           <h2 class="invisible-heading">Selection</h2>
-          <ul class="invisible-list selection-buttons">
-            <li><button type="button" class="filter-button">Все</button></li>
+          <ul class="invisible-list selection">
+            <li><button type="button" class="selection__button">Все</button></li>
             <li>
-              <button type="button" class="filter-button">Веб-сайты</button>
+              <button type="button" class="selection__button">Веб-сайты</button>
             </li>
             <li>
-              <button type="button" class="filter-button">Приложения</button>
+              <button type="button" class="selection__button">Приложения</button>
             </li>
-            <li><button type="button" class="filter-button">Дизайн</button></li>
+            <li><button type="button" class="selection__button">Дизайн</button></li>
             <li>
-              <button type="button" class="filter-button">
+              <button type="button" class="selection__button">
                 Маркетинг
               </button>
             </li>
           </ul>
           <!-- Project List -->
           <h2 class="invisible-heading">Project List</h2>
-          <ul class="invisible-list project-list">
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+          <ul class="invisible-list projects">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-1.jpg"
                     alt="Технокряк"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Технокряк</h3>
-                  <p class="project-description">Веб-сайт</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Технокряк</h3>
+                  <p class="projects__description">Веб-сайт</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-2.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Постер New Orlean vs Golden Star</h3>
-                  <p class="project-description">Дизайн</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Постер New Orlean vs Golden Star</h3>
+                  <p class="projects__description">Дизайн</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-3.jpg"
                     alt="Ресторан Seafood"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Ресторан Seafood</h3>
-                  <p class="project-description">Приложение</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Ресторан Seafood</h3>
+                  <p class="projects__description">Приложение</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-4.jpg"
                     alt="Проект Prime"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Проект Prime</h3>
-                  <p class="project-description">Маркетинг</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Проект Prime</h3>
+                  <p class="projects__description">Маркетинг</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-5.jpg"
                     alt="Проект Boxes"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Проект Boxes</h3>
-                  <p class="project-description">Приложение</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Проект Boxes</h3>
+                  <p class="projects__description">Приложение</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-6.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Inspiration has no Borders</h3>
-                  <p class="project-description">Веб-сайт</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Inspiration has no Borders</h3>
+                  <p class="projects__description">Веб-сайт</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-7.jpg"
                     alt="Издание Limited Edition"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Издание Limited Edition</h3>
-                  <p class="project-description">Дизайн</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Издание Limited Edition</h3>
+                  <p class="projects__description">Дизайн</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-8.jpg"
                     alt="Проект LAB"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Проект LAB</h3>
-                  <p class="project-description">Маркетинг</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Проект LAB</h3>
+                  <p class="projects__description">Маркетинг</p>
                 </div>
               </div>
             </li>
-            <li class="project-card">
-              <div class="project-container">
-                <div class="project-thumb">
+            <li class="projects__card">
+              <div class="projects__container">
+                <div class="projects__thumb">
                   <img
                     src="./images/Project-9.jpg"
                     alt="Growing Business"
                     width="370"
-                    class="project-img"
+                    class="projects__image"
                   />
-                  <p class="project-description-text">
+                  <p class="projects__description-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="project-description-name">
-                  <h3 class="project-name">Проект Prime</h3>
-                  <p class="project-description">Приложение</p>
+                <div class="projects__description-block">
+                  <h3 class="projects__name">Проект Prime</h3>
+                  <p class="projects__description">Приложение</p>
                 </div>
               </div>
             </li>
@@ -270,46 +267,47 @@
     <footer>
       <div class="container footer__container">
         <address>
-          <a href="/index.html" class="webstudio__icon"><span class="logo__web">Web</span>Studio</a>
+          <a href="/index.html" class="logo__studio"><span class="logo__web">Web</span>Studio</a>
           <ul class="contact-details">
             <li>
-              <a href="https://cutt.ly/UJb5n39"><span class="address-kyiv">г. Киев, пр-т Леси Украинки, 26</span></a>
+              <a href="https://cutt.ly/UJb5n39" class="contact-details__address"><span
+                  >г. Киев, пр-т Леси Украинки, 26</span></a>
             </li>
             <li>
-              <a href="mailto:info@devstudio.com">info@example.com</a>
+              <a href="mailto:info@devstudio.com" class="contact-details__communication">info@example.com</a>
             </li>
             <li>
-              <a href="tel:+380961111111">+38 099 111 11 11</a>
+              <a href="tel:+380961111111" class="contact-details__communication">+38 099 111 11 11</a>
             </li>
           </ul>
         </address>
-        <div class="footer-network-container">
-          <h3 class="footer-network-heading">присоединяйтесь</h3>
-          <ul class="footer-network-list">
+        <div class="footer-networks__container">
+          <h3 class="footer-networks__heading">присоединяйтесь</h3>
+          <ul class="footer-network__list">
             <li>
-              <a href="" class="footer-network-hover">
-                <svg class="footer-network-icon">
+              <a href="" class="footer-network__link">
+                <svg class="footer-network__icon">
                   <use href="./images/symbol-defs.svg#network1"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-network-hover">
-                <svg class="footer-network-icon">
+              <a href="" class="footer-network__link">
+                <svg class="footer-network__icon">
                   <use href="./images/symbol-defs.svg#network2"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-network-hover">
-                <svg class="footer-network-icon">
+              <a href="" class="footer-network__link">
+                <svg class="footer-network__icon">
                   <use href="./images/symbol-defs.svg#network3"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="footer-network-hover">
-                <svg class="footer-network-icon">
+              <a href="" class="footer-network__link">
+                <svg class="footer-network__icon">
                   <use href="./images/symbol-defs.svg#network4"></use>
                 </svg>
               </a>
@@ -317,17 +315,17 @@
           </ul>
         </div>
         <form class="footer-form">
-          <h3 class="footer-form-heading">Подпишитесь на рассылку</h3>
-          <div class="footer-form-container">
-            <div class="footer-form-focus">
+          <h3 class="footer-form__heading">Подпишитесь на рассылку</h3>
+          <div class="footer-form__container">
+            <div class="footer-form__input-focus">
               <input
                 type="email"
                 name="footer-mail"
-                id="footer-mail"
+                id="footer-form__mail"
                 placeholder="E-mail"
               />
             </div>
-            <button type="submit" class="footer-submit-button">
+            <button type="submit" class="footer-form__submit-button">
               Подписаться
             </button>
           </div>

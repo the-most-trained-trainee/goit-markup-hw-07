@@ -15,7 +15,7 @@ footer {
     }
 }
 
-.contact-details a {
+.contact-details__communication {
     @include font-set ($line-height: 24px, $color: rgba(255, 255, 255, 0.6));
     text-decoration: none;
     transition: color $cubic-standard;
@@ -24,21 +24,28 @@ footer {
     }
 }
 
-.address-kyiv {
-    color: $main-color;
+
+.contact-details__address {
+    @include font-set ($line-height: 24px, $color: $main-color);
+    text-decoration: none;
+    transition: color $cubic-standard;
+    &:hover, 
+    &:focus {
+        color: $active-color;
+    }
 }
 
-.footer-network-container {
+.footer-networks__container {
     display: inline-block;
     margin-top: 12px;
     margin-left: 70px;
 }
 
-.footer-network-heading {
+.footer-networks__heading {
     @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
 }
 
-.footer-network-list {
+.footer-network__list {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -47,7 +54,7 @@ footer {
     justify-content: center;
 }
 
-.footer-network-list li {
+.footer-network__list li {
     margin: 0px;
     padding: 0;
     height: 20px;
@@ -56,7 +63,14 @@ footer {
     }
 }
 
-.footer-network-hover {
+.footer-network__icon {
+    width: 20px;
+    height: 20px;
+    height: 20px;
+    fill: $main-color;
+}
+
+.footer-network__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,13 +86,6 @@ footer {
     }
 }
 
-.footer-network-icon {
-    width: 20px;
-    height: 20px;
-    height: 20px;
-    fill: $main-color;
-}
-
 .footer-form {
     display: inline-block;
     width: 570px;
@@ -86,12 +93,17 @@ footer {
     margin-left: auto;
 }
 
-.footer-form-heading {
+.footer-form__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-form__heading {
     @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
     margin-bottom: 20px;
 }
 
-.footer-submit-button {
+.footer-form__submit-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -119,34 +131,21 @@ footer {
     }
 }
 
-#footer-mail {
+#footer-form__mail {
     display: inline-block;
     width: 358px;
     background-color: $main-text-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     @include font-set ($font-size: 16px, $line-height: 20px, $text-align: left);
+    padding-top: 14px;
+    padding-bottom: 14px;
     padding-left: 15px;
     transition: border-color $cubic-standard;
     &:hover {
         border-color: $active-color;
     }
-    .footer-form-focus:focus-within & {
+    .footer-form__input-focus:focus-within & {
         border-color: $active-color;
     }
-}
-
-.footer-form-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-send-icon {
-    fill: $main-color;
-    width: 24px;
-    height: 24px;
-}
-
-.footer-form-focus {
-    display: inline-flex;
 }
