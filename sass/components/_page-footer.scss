@@ -1,5 +1,5 @@
 footer {
-    background: #212121;
+    background: $main-text-color;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -10,30 +10,22 @@ footer {
 
 .contact-details {
     padding-top: 20px;
-}
-
-.contact-details li:nth-child(n+2) {
-    padding-top: 9px;
-}
-
-.contact-details a {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover, &:focus {
-        color: #2196F3;
+    & li:nth-child(n+2) {
+        padding-top: 9px;
     }
 }
 
-// to make with nth 
+.contact-details a {
+    @include font-set ($line-height: 24px, $color: rgba(255, 255, 255, 0.6));
+    text-decoration: none;
+    transition: color $cubic-standard;
+    &:hover, &:focus {
+        color: $active-color;
+    }
+}
+
 .address-kyiv {
-    color: #FFFFFF;
+    color: $main-color;
 }
 
 .footer-network-container {
@@ -43,14 +35,7 @@ footer {
 }
 
 .footer-network-heading {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
 }
 
 .footer-network-list {
@@ -80,19 +65,18 @@ footer {
     height: 44px;
     width: 44px;
     background-color: rgba(255, 255, 255, 0.10);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color $cubic-standard;
     &:hover, &:focus  {
-        background-color: #2196F3;
+        background-color: $active-color;
         cursor: pointer;
     }
-    
 }
 
 .footer-network-icon {
     width: 20px;
     height: 20px;
     height: 20px;
-    fill: #ffffff;
+    fill: $main-color;
 }
 
 .footer-form {
@@ -103,14 +87,7 @@ footer {
 }
 
 .footer-form-heading {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    @include font-set ($font-weight: 700, $text-align: left, $transform: uppercase);
     margin-bottom: 20px;
 }
 
@@ -121,50 +98,41 @@ footer {
     height: 50px;
     width: 200px;
     border-radius: 4px;
-    background-color: #2196F3;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.875;
-    letter-spacing: 0.06em;
-    text-align: center;
+    background-color: $active-color;
+    color: $main-color;
+    @include font-set ($font-weight: 700, $font-size: 16px, $line-height: 30px, $letter-spacing: 0.06em);    
     cursor: pointer;
     border: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow $cubic-standard;
     &:hover, &:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
-}
-
-.footer-submit-button::after {
-    content: "";
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    box-sizing: border-box;
-    margin-left: 10px;
-    background-image: url(../images/icon-send.svg);
-    background-size: contain;
+    &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        box-sizing: border-box;
+        margin-left: 10px;
+        background-image: url(../images/icon-send.svg);
+        background-size: contain;
+    }
 }
 
 #footer-mail {
     display: inline-block;
     width: 358px;
-    background-color: #212121;
+    background-color: $main-text-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-
-    font-family: 'Roboto';
+    @include font-set ($font-size: 16px, $line-height: 20px, $text-align: left);
     padding-left: 15px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: rgb(255, 255, 255);
-    transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color $cubic-standard;
     &:hover {
-        border-color: #2196F3;
+        border-color: $active-color;
+    }
+    .footer-form-focus:focus-within & {
+        border-color: $active-color;
     }
 }
 
@@ -174,15 +142,11 @@ footer {
 }
 
 .footer-send-icon {
-    fill: #FFFFFF;
+    fill: $main-color;
     width: 24px;
     height: 24px;
 }
 
 .footer-form-focus {
     display: inline-flex;
-}
-
-.footer-form-focus:focus-within #footer-mail {
-    border-color: #2196F3;
 }

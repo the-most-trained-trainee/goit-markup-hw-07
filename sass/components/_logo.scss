@@ -1,24 +1,20 @@
 %logo-default {
+    @include font-set ($font-family: 'Raleway', $font-weight: 700, $font-size: 26px, $line-height: 31px);
     display: inline-block;
-    font-family: 'Raleway', Arial, Helvetica;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
     margin-right: 92px;
+    text-decoration: none;
 }
 
 .logo {
     @extend %logo-default;
-    color: #000000;
+    color: $contast-color;
 }
 
 .webstudio__icon {
     @extend %logo-default;
-    color: #FFFFFF;
+    color: $main-color;
 }
 
 .logo__web {
-    color: #2196F3;
+    color: $active-color;
 }
